@@ -3,12 +3,10 @@ import Modal from '../Modal/Modal';
 
 const Singlegun = (props) => {
     const [modalData, setModalData] = useState({})
-    console.log(modalData)
     const { gun, increase } = props
     const { name, bullet, price, capacity, img } = gun
     return (
         <div>
-            {modalData && <Modal data={modalData} setModalData={setModalData}></Modal>}
             <div className="card w-full h-full shadow-xl bg-slate-50">
                 <figure><img className='h-48 w-96 p-3 ' src={img} alt="Shoes" /></figure>
                 <div className="card-body">
@@ -27,6 +25,7 @@ const Singlegun = (props) => {
                     </div>
                 </div>
             </div>
+            {modalData && <Modal data={modalData} setModalData={setModalData}></Modal>}
         </div>
     );
 };
