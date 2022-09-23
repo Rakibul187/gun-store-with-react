@@ -9,7 +9,7 @@ function App() {
     setCount(count + 1)
   }
   return (
-    <div className="App">
+    <div className="App bg-slate-50">
       <Navbar count={count}></Navbar>
       <  Allgun increase={countIncrease}></Allgun>
     </div>

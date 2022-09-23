@@ -12,7 +12,7 @@ const Allgun = (props) => {
             <p className='text-center mb-4'>Welcome to the Internet's leading retailer for firearms, ammunition and accessories. Since 2002 we have sold and shipped over 2 million firearms ! Buying a firearm online is simple, safe and completely legal ! If you are not familiar with the process!!</p>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7'>
                 {
-                    guns.map(gun => <Singlegun increase={props.increase} gun={gun}></Singlegun>)
+                    guns.map(gun => <Singlegun key={gun.id} increase={props.increase} gun={gun}></Singlegun>)
                 }
             </div>
         </div>

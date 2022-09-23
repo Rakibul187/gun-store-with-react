@@ -3,9 +3,9 @@ import React from 'react';
 const Navbar = ({ count }) => {
     return (
         <div>
-            <div className="navbar bg-base-100 shadow-lg py-4 lg:px-16">
+            <div className="navbar bg-base-100 shadow-lg py-4 lg:px-16 bg-slate-50">
                 <div className="flex-1">
-                    <a href='/' className="btn btn-ghost normal-case text-xl">Gun Store</a>
+                    <a href='/' className=" text-3xl">Gun <span className='text-red-600 pl-1 font-bold'>Store</span></a>
                 </div>
                 <div className="flex-none ">
                     <div className="dropdown dropdown-end">

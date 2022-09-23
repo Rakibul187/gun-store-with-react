@@ -1,12 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
+import Modal from '../Modal/Modal';
 
 const Singlegun = (props) => {
+    const [modalData, setModalData] = useState({})
+    console.log(modalData)
     const { gun, increase } = props
     const { name, bullet, price, capacity, img } = gun
     return (
         <div>
-            <div className="card w-full h-full bg-base-100 shadow-xl">
-                <figure><img className='h-48 w-96 p-3' src={img} alt="Shoes" /></figure>
+            {modalData && <Modal data={modalData} setModalData={setModalData}></Modal>}
+            <div className="card w-full h-full shadow-xl bg-slate-50">
+                <figure><img className='h-48 w-96 p-3 ' src={img} alt="Shoes" /></figure>
                 <div className="card-body">
                     <h2 className="card-title">
                         {name}
@@ -18,7 +22,7 @@ const Singlegun = (props) => {
                         <div className="badge badge-outline">{price}</div>
                         <div className='mt-3'>
                             <button onClick={increase} className="btn btn-danger mr-3">Add to cart</button>
-                            <button className="btn btn-success">Details</button>
+                            <label onClick={() => { setModalData(gun) }} htmlFor="my-modal" className="btn modal-button btn-success">Details</label>
                         </div>
                     </div>
                 </div>
